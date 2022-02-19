@@ -1,0 +1,11 @@
+.inputGrey {
+  min-width: 100%;
+  padding: 2px 3px;
+  margin-bottom: 6px;
+  background-color: transparent;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+  letter-spacing: 1px;
+}
