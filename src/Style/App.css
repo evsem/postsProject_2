@@ -23,3 +23,12 @@ body {
   max-width: 600px;
   margin: 0 auto;
 }
+
+.titleWarning {
+  font-size: 32px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0px 0px 10px 0px;
+}
