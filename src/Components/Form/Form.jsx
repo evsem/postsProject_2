@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import ButtonGrey from '../../UI/ButtonGrey/ButtonGrey'
 import InputGrey from '../../UI/InputGrey/InputGrey'
 import classes from './Form.module.css'
-
 const Form = ({ addPost_Func }) => {
   let [param, setParam] = useState({ title: '', body: '' })
 
@@ -15,7 +14,6 @@ const Form = ({ addPost_Func }) => {
     addPost_Func(newPost)
     setParam({ title: '', body: '' })
   }
-
   return (
     <form className={classes.wrapper}>
       <InputGrey
@@ -30,7 +28,7 @@ const Form = ({ addPost_Func }) => {
         value={param.body}
         onChange={(e) => setParam({ ...param, body: e.target.value })}
       />
-      <ButtonGrey onclick={addNewPost}>Add post</ButtonGrey>
+      <ButtonGrey onClick={addNewPost}>Add post</ButtonGrey>
     </form>
   )
 }

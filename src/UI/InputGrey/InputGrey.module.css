@@ -1,8 +1,10 @@
 .inputGrey {
   min-width: 100%;
-  padding: 2px 3px;
+  padding: 3px 4px;
   margin-bottom: 6px;
   background-color: transparent;
+  border: 2px solid grey;
+  border-radius: 3px;
   font-family: 'Montserrat';
   font-size: 16px;
   font-weight: 400;
