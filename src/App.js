@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react'
 import Filter from './Components/Filter/Filter'
 import Form from './Components/Form/Form'
 import List from './Components/List/List'
+import { usePosts } from './Hooks/usePosts'
 import './Style/App.css'
 
 const App = () => {
@@ -14,6 +15,7 @@ const App = () => {
     { id: 6, title: 'PHP', body: 'Programming language' },
   ])
   let [filter, setFilter] = useState({ sort: '', query: '' })
+  let searchedAndSelectedPosts = usePosts(posts, filter.sort, filter.query)
 
   const removePost = (post) => {
     setPosts(posts.filter((p) => p.id !== post.id))
@@ -22,19 +24,6 @@ const App = () => {
     setPosts([...posts, newPost])
   }
 
-  const sortedPosts = useMemo(() => {
-    if (filter.sort) {
-      return [...posts].sort((a, b) =>
-        a[filter.sort].localeCompare(b[filter.sort])
-      )
-    }
-    return posts
-  }, [posts, filter.sort])
-  const searchedAndSelectedPosts = useMemo(() => {
-    return sortedPosts.filter((post) =>
-      post.title.toLowerCase().includes(filter.query)
-    )
-  }, [sortedPosts, filter.query])
   return (
     <div className="App">
       <Form addPost_Func={addNewPost} />

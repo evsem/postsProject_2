@@ -1,6 +1,5 @@
 import React from 'react'
 import InputGrey from '../../UI/InputGrey/InputGrey'
-import SelectGrey from '../../UI/SelectGrey/SelectGrey'
 import classes from './Filter.module.css'
 const Filter = ({ filter, setFilter }) => {
   return (
